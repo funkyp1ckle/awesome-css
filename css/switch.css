@@ -1,0 +1,51 @@
+:root {
+    --switch-track-background: rgb(82, 82, 82);
+    --switch-enabled-track-background: rgb(148, 118, 255);
+    --switch-width: 70px;
+    --switch-height: calc(var(--switch-width) * 0.45);
+    --switch-thumb-size: calc(var(--switch-height) - 20px);
+    --switch-thumb-border-width: 5px;
+    --switch-thumb-start: calc(((var(--switch-height) - var(--switch-thumb-size)) / 2) - var(--switch-thumb-border-width));
+    --switch-thumb-end: calc(var(--switch-width) - 100% - (2 * var(--switch-thumb-start)));
+    --switch-radius: 999px;
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggleSwitch {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: var(--switch-width);
+    height: var(--switch-height);
+    background-color: var(--switch-track-background);
+    border-radius: var(--switch-radius);
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+}
+
+.toggleSwitch span {
+    content: "";
+    position: relative;
+    height: var(--switch-thumb-size);
+    width: var(--switch-thumb-size);
+    left: var(--switch-thumb-start);
+    background-color: transparent;
+    border-radius: 50%;
+    transition: transform 0.1s linear;
+    box-shadow: 5px 2px 7px rgba(8, 8, 8, 0.26);
+    border: var(--switch-thumb-border-width) solid white;
+}
+
+.toggle input:checked + .toggleSwitch span {
+    transform: translateX(var(--switch-thumb-end));
+    background-color: white;
+}
+
+/* Switch background change */
+.toggle input:checked + .toggleSwitch {
+    background-color: var(--switch-enabled-track-background);
+    transition-duration: .2s;
+}

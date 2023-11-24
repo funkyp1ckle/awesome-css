@@ -1,0 +1,100 @@
+:root {
+    --theme-switch-shadow: black;
+    --theme-switch-track-background: white;
+    --theme-switch-enabled-track-background: #374151;
+    --theme-switch-width: 150px;
+    --theme-switch-height: calc(var(--theme-switch-width) * 0.45);
+    --theme-switch-border-width: 5px;
+    --theme-switch-thumb-size: calc(var(--theme-switch-height) - 20px);
+    --theme-switch-start: calc((var(--theme-switch-height) - var(--theme-switch-thumb-size) + var(--theme-switch-border-width)) / 2);
+    --theme-switch-end: calc(var(--theme-switch-width) - 100% - (2 * var(--theme-switch-start)));
+    --theme-switch-border-color: #e4e7ec;
+    --theme-switch-icon-size: calc(var(--theme-switch-thumb-size) * 0.7);
+    --theme-switch-thumb-color: #ffeccf;
+    --theme-switch-thumb-enabled-color: #485367;
+    --theme-switch-radius: 999px;
+}
+
+.themeToggle .toggleSlot {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: var(--theme-switch-width);
+    height: var(--theme-switch-height);
+    background-color: var(--theme-switch-track-background);
+    border-radius: var(--theme-switch-radius);
+    cursor: pointer;
+    border: var(--theme-switch-border-width) solid var(--theme-switch-border-color);
+    box-shadow: 0 10px 25px var(--theme-switch-shadow);
+    transition: background-color 250ms;
+}
+
+#themeCheckBox {
+    display: none;
+}
+
+#themeCheckBox:checked + .toggleSlot {
+    background-color: var(--theme-switch-enabled-track-background);
+}
+
+.themeToggle .toggleSlot .toggleButton {
+    position: relative;
+    height: var(--theme-switch-thumb-size);
+    width: var(--theme-switch-thumb-size);
+    left: var(--theme-switch-start);
+    border-radius: var(--theme-switch-radius);
+    background-color: var(--theme-switch-thumb-color);
+    box-shadow: inset 0 0 0 0.75em #ffbb52;
+    outline: none;
+    transition: background-color 250ms, border-color 250ms, transform 250ms cubic-bezier(.3, 1, 0.75, 0.9);
+}
+
+#themeCheckBox:checked ~ .toggleSlot .toggleButton {
+    background-color: var(--theme-switch-thumb-enabled-color);
+    box-shadow: inset 0 0 0 0.75em white;
+    transform: translateX(var(--theme-switch-end));
+}
+
+.sun-icon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #ffbb52;
+}
+
+.sunIconWrapper {
+    position: absolute;
+    height: var(--theme-switch-icon-size);
+    width: var(--theme-switch-icon-size);
+    opacity: 1;
+    transform: translateX(var(--theme-switch-end)) rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 250ms cubic-bezier(.3, 1, 0.75, 0.9);
+}
+
+#themeCheckBox:checked ~ .toggleSlot .sunIconWrapper {
+    opacity: 0;
+    transform: rotate(0deg);
+}
+
+.moon-icon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.moonIconWrapper {
+    position: absolute;
+    height: var(--theme-switch-icon-size);
+    width: var(--theme-switch-icon-size);
+    opacity: 0;
+    left: var(--theme-switch-start);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 250ms cubic-bezier(.3, 1, 0.75, 0.9);
+}
+
+#themeCheckBox:checked ~ .toggleSlot .moonIconWrapper {
+    opacity: 1;
+    transform: translateX(var(--theme-switch-start)) rotate(-15deg);
+}

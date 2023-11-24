@@ -1,0 +1,82 @@
+:root {
+    --header-height: 70px;
+    --header-background: #22242A;
+    --header-text-color: white;
+    --header-contact-background: darkturquoise;
+    --header-contact-text-color: black;
+    --header-contact-rollover-text-color: white;
+    --header-contact-radius: 999px;
+    --header-links-color: white;
+    --header-links-rollover: turquoise;
+    --header-logo-size: 35px;
+}
+
+header {
+    height: var(--header-height);
+    background-color: var(--header-background);
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    position: sticky;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 5px 15px black;
+}
+
+header #logo {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 35px;
+    cursor: pointer;
+    color: var(--header-text-color);
+
+}
+
+header #logo img {
+    width: var(--header-logo-size);
+    height: var(--header-logo-size);
+}
+
+header #logo h1 {
+    margin: 0 0 0 10px;
+    padding: 0;
+    font-family: Roboto, serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+header .search {
+    margin: auto;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+
+header nav a {
+    margin-right: 50px;
+    color: var(--header-links-color);
+    transition: color 250ms linear;
+}
+
+header nav a:hover {
+    color: var(--header-links-rollover);
+}
+
+header #contactBtn {
+    background-color: var(--header-contact-background);
+    padding: 10px 25px;
+    margin: 0;
+    border-radius: var(--header-contact-radius);
+    color: var(--header-contact-text-color);
+}
+
+header #contactBtn:hover {
+    color: var(--header-contact-rollover-text-color);
+}

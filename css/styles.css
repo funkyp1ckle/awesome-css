@@ -1,0 +1,43 @@
+:root {
+    counter-reset: th curItem;
+    --page-background: rgb(25, 25, 25);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--page-background);
+}
+
+#content {
+    margin-left: var(--sidebar-width-collapsed);
+    transition: margin 100ms linear;
+}
+
+#table {
+    width: calc(0.8 * (100% - var(--sidebar-width)));
+    margin: 100px auto;
+    border-collapse: collapse;
+    transition: width 100ms linear;
+}
+
+#table td {
+    position: relative;
+    padding: 50px;
+    border: dashed turquoise;
+}
+
+#table td::before {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    counter-increment: curItem;
+    content: counter(curItem);
+    color: white;
+}
+
+#table td > * {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>awesome-css</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="res/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="res/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="res/favicon-16x16.png">
+    <link rel="manifest" href="res/site.webmanifest">
+    <link rel="shortcut icon" href="res/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="res/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <link rel="stylesheet" type="text/css" href="css/sidebar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/switch.css"/>
+    <link rel="stylesheet" type="text/css" href="css/hamburger.css"/>
+    <link rel="stylesheet" type="text/css" href="css/themeSwitch.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+<body>
+<header>
+    <div class="hamburger">
+        <label>
+            <input type="checkbox" id="hamburgerInput" autocomplete="off" onchange="document.getElementById('sidebar').classList.toggle('open');">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+    <a id="logo" href="/">
+        <img src="res/android-chrome-512x512.png" alt="Logo"/>
+        <h1>Nectar</h1>
+    </a>
+    <div class="search">
+        <label>
+            <input type="search" placeholder="Search">
+        </label>
+        <button>
+            <span class="iconify search-icon" data-icon="ic:round-search" data-inline="false"></span>
+        </button>
+    </div>
+    <nav>
+        <a href="#">Item 1</a>
+        <a href="#">Item 2</a>
+        <a href="#">Item 3</a>
+        <a id="contactBtn" href="#">Contact</a>
+    </nav>
+</header>
+<div id="sidebar">
+    <nav>
+        <a class="sidebarItem" href="#">
+            <span class="iconify" data-icon="radix-icons:dashboard" data-inline="false"></span>
+            <span class="sidebarItemName">Dashboard</span>
+        </a>
+        <a class="sidebarItem" href="#">
+            <span class="iconify" data-icon="tabler:user" data-inline="false"></span>
+            <span class="sidebarItemName">Account</span>
+        </a>
+        <a class="sidebarItem" href="#">
+            <span class="iconify" data-icon="tabler:message" data-inline="false"></span>
+            <span class="sidebarItemName">Messsages</span>
+        </a>
+        <a class="sidebarItem" href="#">
+            <span class="iconify" data-icon="ion:analytics-sharp" data-inline="false"></span>
+            <span class="sidebarItemName">Analytics</span>
+        </a>
+        <a class="sidebarItem" href="#">
+            <span class="iconify" data-icon="ep:files" data-inline="false"></span>
+            <span class="sidebarItemName">File Manager</span>
+        </a>
+        <a class="sidebarItem" href="#">
+            <span class="iconify" data-icon="mdi:cart-outline" data-inline="false"></span>
+            <span class="sidebarItemName">Order</span>
+        </a>
+    </nav>
+</div>
+<div id="content">
+    <table id="table">
+        <tr class="row">
+            <td>
+                <div class="toggle">
+                    <input type="checkbox" id="toggleCheckbox" autocomplete="off"/>
+                    <label class="toggleSwitch" for="toggleCheckbox">
+                        <span></span>
+                    </label>
+                </div>
+            </td>
+            <td>
+                <div class="themeToggle">
+                    <label>
+                        <input type="checkbox" id="themeCheckBox" autocomplete="off"/>
+                        <span class="toggleSlot">
+                            <span class='sunIconWrapper'>
+                                <span class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></span>
+                            </span>
+                            <span class='toggleButton'></span>
+                            <span class='moonIconWrapper'>
+                                <span class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+</body>
+</html>
