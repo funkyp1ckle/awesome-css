@@ -1,5 +1,6 @@
 :root {
     --header-height: 70px;
+    --header-padding: 25px;
     --header-background: #22242A;
     --header-text-color: white;
     --header-contact-background: darkturquoise;
@@ -16,7 +17,7 @@ header {
     background-color: var(--header-background);
     display: flex;
     align-items: center;
-    padding: 0 25px;
+    padding: 0 var(--header-padding);
     position: sticky;
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
