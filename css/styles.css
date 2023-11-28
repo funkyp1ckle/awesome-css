@@ -16,7 +16,7 @@ body {
 }
 
 #table {
-    width: calc(0.8 * (100% - var(--sidebar-width)));
+    width: 80%;
     margin: 100px auto;
     border-collapse: collapse;
     transition: width 100ms linear;
@@ -40,4 +40,9 @@ body {
 #table td > * {
     display: flex;
     justify-content: center;
+}
+
+.tabbedPane {
+    width: 80%;
+    margin: 100px auto;
 }

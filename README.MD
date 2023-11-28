@@ -3,14 +3,14 @@
 
 # Components:
 - ~~toggle-buttons~~
-- ~~hamburger~~
+- ~~hamburger~~ (animation doesn't work for all dimensions)
 - ~~theme switch~~
 - ~~search~~
 - ~~navbar~~
-- ~~sidebar~~
+- ~~sidebar~~ (CLEANUP DIVS)
 - slider
 - circular slider
-- tabbed pane
+- ~~tabbed pane~~ (PICK NOT UGLY COLORS, ADD OPTION FOR HORIZONTAL SLIDER)
 - graphs
 - calendar
 - notifications

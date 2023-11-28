@@ -1,13 +1,10 @@
-:root {
+.hamburger {
+    padding: 1px;
     --burger-color: white;
     --burger-width: 18px;
     --burger-height: 14px;
     --burger-line-thickness: calc(var(--burger-height) / 8);
     --burger-line-radius: 999px;
-}
-
-.hamburger {
-    padding: 1px;
 }
 
 .hamburger label {

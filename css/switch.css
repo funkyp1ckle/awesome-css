@@ -1,4 +1,4 @@
-:root {
+.toggle {
     --switch-track-background: rgb(82, 82, 82);
     --switch-enabled-track-background: rgb(148, 118, 255);
     --switch-width: 70px;

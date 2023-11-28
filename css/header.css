@@ -1,5 +1,8 @@
 :root {
     --header-height: 70px;
+}
+
+header {
     --header-padding: 25px;
     --header-background: #22242A;
     --header-text-color: white;
@@ -10,14 +13,12 @@
     --header-links-color: white;
     --header-links-rollover: turquoise;
     --header-logo-size: 35px;
-}
 
-header {
     height: var(--header-height);
     background-color: var(--header-background);
     display: flex;
     align-items: center;
-    padding: 0 var(--header-padding);
+    padding: 0 calc((var(--sidebar-width-collapsed) / 2) - (var(--sidebar-icon-size) / 2));
     position: sticky;
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);

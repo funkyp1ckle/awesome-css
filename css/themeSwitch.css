@@ -1,4 +1,4 @@
-:root {
+.themeToggle {
     --theme-switch-shadow: black;
     --theme-switch-track-background: white;
     --theme-switch-enabled-track-background: #374151;

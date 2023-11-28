@@ -22,17 +22,21 @@
     <link rel="stylesheet" type="text/css" href="css/switch.css"/>
     <link rel="stylesheet" type="text/css" href="css/hamburger.css"/>
     <link rel="stylesheet" type="text/css" href="css/themeSwitch.css"/>
+    <link rel="stylesheet" type="text/css" href="css/tabbedPane.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
     <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+
+    <script src="js/tabbedPane.js" defer></script>
 <body>
 <header>
     <div class="hamburger">
         <label>
-            <input type="checkbox" id="hamburgerInput" autocomplete="off" onchange="document.getElementById('sidebar').classList.toggle('open');">
+            <input type="checkbox" id="hamburgerInput" autocomplete="off"
+                   onchange="document.getElementById('sidebar').classList.toggle('open');">
             <span></span>
             <span></span>
             <span></span>
@@ -114,6 +118,124 @@
             </td>
         </tr>
     </table>
+    <div class="tabbedPane">
+        <div class="tabContainer">
+            <input type="radio" id="tab1" name="tab" checked/>
+            <label class="tab" for="tab1">Item 1</label>
+            <input type="radio" id="tab2" name="tab"/>
+            <label class="tab" for="tab2">Item 2</label>
+            <input type="radio" id="tab3" name="tab"/>
+            <label class="tab" for="tab3">Item 3</label>
+            <input type="radio" id="tab4" name="tab"/>
+            <label class="tab" for="tab4">Item 4</label>
+            <div id="border">
+            </div>
+            <div id="slider">
+            </div>
+        </div>
+        <div class="descriptionContainer">
+            <div class="description" id="description1">
+                <div class="title">
+                    <h3>
+                        <span> Description </span>
+                        <span class="company">
+                            &nbsp;@
+                            <a href="" target="”_blank”">
+                              Place
+                            </a>
+                        </span>
+                    </h3>
+                </div>
+                <h4>Time</h4>
+                <ul>
+                    <li>
+                        LONG TEXTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+                    </li>
+                    <li>
+                        Bullet 2
+                    </li>
+                    <li>
+                        Bullet 3
+                    </li>
+                </ul>
+            </div>
+            <div class="description" id="description2">
+                <div class="title">
+                    <h3>
+                        <span> Description </span>
+                        <span class="company">
+                            &nbsp;@
+                            <a href="" target="”_blank”">
+                              Place
+                            </a>
+                        </span>
+                    </h3>
+                </div>
+                <h4>Time</h4>
+                <ul>
+                    <li>
+                        LONG TEXTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+                    </li>
+                    <li>
+                        Bullet 2
+                    </li>
+                    <li>
+                        Bullet 3
+                    </li>
+                </ul>
+            </div>
+            <div class="description" id="description3">
+                <div class="title">
+                    <h3>
+                        <span> Description </span>
+                        <span class="company">
+                            &nbsp;@
+                            <a href="" target="”_blank”">
+                              Place
+                            </a>
+                        </span>
+                    </h3>
+                </div>
+                <h4>Time</h4>
+                <ul>
+                    <li>
+                        LONG TEXTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+                    </li>
+                    <li>
+                        Bullet 2
+                    </li>
+                    <li>
+                        Bullet 3
+                    </li>
+                </ul>
+            </div>
+            <div class="description" id="description4">
+                <div class="title">
+                    <h3>
+                        <span> Description </span>
+                        <span class="company">
+                            &nbsp;@
+                            <a href="" target="”_blank”">
+                              Place
+                            </a>
+                        </span>
+                    </h3>
+                </div>
+                <h4>Time</h4>
+                <ul>
+                    <li>
+                        LONG TEXTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+                    </li>
+                    <li>
+                        Bullet 2
+                    </li>
+                    <li>
+                        Bullet 3
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

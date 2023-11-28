@@ -1,0 +1,123 @@
+.tabbedPane {
+    --tab-height: 70px;
+    --tab-text-color: white;
+    --tab-text-rollover: red;
+    --tab-count: 4;
+    --slider-width: 3px;
+    --slider-color: red;
+    --border-color: white;
+    --border-radius: 999px;
+
+    --title-font-size: 22px;
+    --title-color: white;
+    --time-font-size: 13px;
+    --time-color: white;
+    --content-font-size: 18px;
+    --content-color: white;
+
+    position: relative;
+    display: flex;
+}
+
+.tabbedPane .tabContainer {
+    display: block;
+}
+
+.tabbedPane .tabContainer #border {
+    content: '';
+    display: block;
+    position: absolute;
+    height: calc(var(--tab-height) * var(--tab-count));
+    width: var(--slider-width);
+    background-color: var(--border-color);
+    top: 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.tabbedPane .tabContainer #slider {
+    content: '';
+    position: absolute;
+    height: var(--tab-height);
+    width: var(--slider-width);
+    background-color: var(--slider-color);
+    top: 0;
+    transition: top 100ms linear;
+}
+
+.tabbedPane .tabContainer input {
+    display: none;
+}
+
+.tabbedPane .tabContainer input:checked + label {
+     color: var(--tab-text-rollover);
+ }
+
+.tabbedPane .tabContainer #tab1:checked ~ #slider {
+    top: calc(0 * var(--tab-height));
+}
+
+.tabbedPane .tabContainer #tab2:checked ~ #slider {
+    top: calc(1 * var(--tab-height));
+}
+
+.tabbedPane .tabContainer #tab3:checked ~ #slider {
+    top: calc(2 * var(--tab-height));
+}
+
+.tabbedPane .tabContainer #tab4:checked ~ #slider {
+    top: calc(3 * var(--tab-height));
+}
+
+.tabbedPane label {
+    display: flex;
+    height: var(--tab-height);
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    color: var(--tab-text-color);
+    margin-left: var(--slider-width);
+    cursor: pointer;
+    transition: color 100ms linear;
+}
+
+.tabbedPane .tabContainer label:hover {
+    color: var(--tab-text-rollover);
+}
+
+.tabbedPane .descriptionContainer {
+    position: relative;
+    display: flex;
+    padding: 10px;
+}
+
+.tabbedPane .descriptionContainer .description {
+    display: none;
+}
+
+.tabbedPane .descriptionContainer .description h3 {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: var(--title-font-size);
+    color: var(--title-color);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.tabbedPane .descriptionContainer .description h4 {
+    position: relative;
+    display: block;
+    font-size: var(--time-font-size);
+    color: var(--time-color);
+    margin: 0;
+    padding: 0;
+}
+
+.tabbedPane .descriptionContainer .description ul li {
+    padding: 5px 0 5px 30px;
+    font-size: var(--content-font-size);
+    color: var(--content-color);
+}

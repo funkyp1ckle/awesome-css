@@ -1,4 +1,4 @@
-:root {
+.search {
     --search-border-radius: 999px;
     --search-width: 500px;
     --search-button-width: 50px;
@@ -9,9 +9,7 @@
     --search-rollover-background: rgb(230, 230, 230);
     --search-focus-background: white;
     --search-text-color: black;
-}
 
-.search {
     display: flex;
     align-items: center;
     border-radius: var(--search-border-radius);
