@@ -22,7 +22,8 @@
     <link rel="stylesheet" type="text/css" href="css/switch.css"/>
     <link rel="stylesheet" type="text/css" href="css/hamburger.css"/>
     <link rel="stylesheet" type="text/css" href="css/themeSwitch.css"/>
-    <link rel="stylesheet" type="text/css" href="css/tabbedPane.css">
+    <link rel="stylesheet" type="text/css" href="css/tabbedPane.css"/>
+    <link rel="stylesheet" type="text/css" href="css/social.css"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,19 +34,21 @@
     <script src="js/tabbedPane.js" defer></script>
 <body>
 <header>
-    <div class="hamburger">
-        <label>
-            <input type="checkbox" id="hamburgerInput" autocomplete="off"
-                   onchange="document.getElementById('sidebar').classList.toggle('open');">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+    <div id="left">
+        <div class="hamburger">
+            <label>
+                <input type="checkbox" id="hamburgerInput" autocomplete="off"
+                       onchange="document.getElementById('sidebar').classList.toggle('open');">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <a id="logo" href="/">
+            <img src="res/android-chrome-512x512.png" alt="Logo"/>
+            <h1>Nectar</h1>
+        </a>
     </div>
-    <a id="logo" href="/">
-        <img src="res/android-chrome-512x512.png" alt="Logo"/>
-        <h1>Nectar</h1>
-    </a>
     <div class="search">
         <label>
             <input type="search" placeholder="Search">
@@ -54,12 +57,20 @@
             <span class="iconify search-icon" data-icon="ic:round-search" data-inline="false"></span>
         </button>
     </div>
-    <nav>
-        <a href="#">Item 1</a>
-        <a href="#">Item 2</a>
-        <a href="#">Item 3</a>
-        <a id="contactBtn" href="#">Contact</a>
-    </nav>
+    <div id="buttons">
+        <button id="searchButton">
+            <span class="iconify search-icon" data-icon="ic:round-search" data-inline="false"></span>
+        </button>
+        <button id="settings">
+            <span class="iconify search-icon" data-icon="carbon:settings" data-inline="false"></span>
+        </button>
+        <button id="notifications">
+            <span class="iconify search-icon" data-icon="ion:notifications-outline" data-inline="false"></span>
+        </button>
+        <button id="profilePhoto">
+            <img src="res/profilePicture.png" alt="Profile Picture">
+        </button>
+    </div>
 </header>
 <div id="sidebar">
     <nav>

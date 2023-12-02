@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     color: var(--search-text-color);
-    width: var(--search-width);
+    min-width: var(--search-width);
     height: var(--search-height);
     background-color: var(--search-background);
     padding: var(--search-padding-height) var(--search-padding-width);
@@ -69,6 +69,6 @@
 }
 
 .search-icon {
-    width: 60%;
-    height: 60%;
+    width: 55%;
+    height: 55%;
 }

@@ -3,11 +3,11 @@
 
 # Components:
 - ~~toggle-buttons~~
-- ~~hamburger~~ (animation doesn't work for all dimensions)
+- ~~hamburger~~
 - ~~theme switch~~
 - ~~search~~
 - ~~navbar~~
-- ~~sidebar~~ (CLEANUP DIVS)
+- ~~sidebar~~
 - slider
 - circular slider
 - ~~tabbed pane~~ (PICK NOT UGLY COLORS, ADD OPTION FOR HORIZONTAL SLIDER)

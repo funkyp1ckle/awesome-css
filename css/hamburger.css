@@ -1,10 +1,15 @@
 .hamburger {
-    padding: 1px;
     --burger-color: white;
-    --burger-width: 18px;
-    --burger-height: 14px;
-    --burger-line-thickness: calc(var(--burger-height) / 8);
+    --burger-width: 24px;
+    --burger-height: 17px;
+    --burger-line-thickness: 2px;
     --burger-line-radius: 999px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--burger-width);
+    height: var(--burger-height);
 }
 
 .hamburger label {
@@ -12,8 +17,8 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    width: var(--burger-width);
-    height: var(--burger-height);
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
     cursor: pointer;
 }
 
@@ -32,7 +37,8 @@
 }
 
 .hamburger label input:checked ~ span:nth-of-type(1) {
-    transform: rotate(45deg);
+    width: calc((var(--burger-height) - 2px) * sqrt(2));
+    transform: translate(calc((var(--burger-width) - (var(--burger-height))) / 2), calc(var(--burger-line-thickness) / -2)) rotate(45deg);
 }
 
 .hamburger label input:checked ~ span:nth-of-type(2) {
@@ -41,5 +47,6 @@
 }
 
 .hamburger label input:checked ~ span:nth-of-type(3) {
-    transform: rotate(-45deg);
+    width: calc((var(--burger-height) - 2px) * sqrt(2));
+    transform: translate(calc((var(--burger-width) - (var(--burger-height))) / 2), calc(var(--burger-line-thickness) / 2)) rotate(-45deg);
 }
