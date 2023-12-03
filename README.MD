@@ -10,7 +10,7 @@
 - ~~sidebar~~
 - slider
 - circular slider
-- ~~tabbed pane~~ (PICK NOT UGLY COLORS, ADD OPTION FOR HORIZONTAL SLIDER)
+- ~~tabbed pane~~
 - graphs
 - calendar
 - notifications

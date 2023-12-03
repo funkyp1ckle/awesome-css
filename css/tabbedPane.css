@@ -1,11 +1,12 @@
 .tabbedPane {
     --tab-height: 70px;
     --tab-text-color: white;
-    --tab-text-rollover: red;
+    --tab-text-rollover: rgb(0, 119, 182);
+    --label-rollover-background: rgba(30, 30, 30);
     --tab-count: 4;
     --slider-width: 3px;
-    --slider-color: red;
-    --border-color: white;
+    --slider-color: rgb(0, 119, 182);
+    --border-color: darkgray;
     --border-radius: 999px;
 
     --title-font-size: 22px;
@@ -17,10 +18,22 @@
 
     position: relative;
     display: flex;
+    justify-content: space-between;
+}
+
+.tabbedPane.horizontal {
+    flex-direction: column;
 }
 
 .tabbedPane .tabContainer {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1 1 0;
+}
+
+.tabbedPane.horizontal .tabContainer {
+    flex-direction: row;
 }
 
 .tabbedPane .tabContainer #border {
@@ -35,18 +48,35 @@
     overflow: hidden;
 }
 
+.tabbedPane.horizontal .tabContainer #border {
+    height: var(--slider-width);
+    width: 100%;
+}
+
 .tabbedPane .tabContainer #slider {
     content: '';
     position: absolute;
     height: var(--tab-height);
     width: var(--slider-width);
     background-color: var(--slider-color);
-    top: 0;
     transition: top 100ms linear;
+}
+
+.tabbedPane.horizontal .tabContainer #slider {
+    transition: left 100ms linear;
+}
+
+.tabbedPane.horizontal .tabContainer #slider {
+    height: var(--slider-width);
+    width: calc(100% / var(--tab-count));
 }
 
 .tabbedPane .tabContainer input {
     display: none;
+}
+
+.tabbedPane.horizontal .tabContainer input:checked ~ #slider {
+    top: 0 !important;
 }
 
 .tabbedPane .tabContainer input:checked + label {
@@ -54,31 +84,56 @@
  }
 
 .tabbedPane .tabContainer #tab1:checked ~ #slider {
-    top: calc(0 * var(--tab-height));
+    top: 0;
+}
+
+.tabbedPane.horizontal .tabContainer #tab1:checked ~ #slider {
+    left: 0;
 }
 
 .tabbedPane .tabContainer #tab2:checked ~ #slider {
     top: calc(1 * var(--tab-height));
 }
 
+.tabbedPane.horizontal .tabContainer #tab2:checked ~ #slider {
+    left: calc(100% / var(--tab-count));
+}
+
 .tabbedPane .tabContainer #tab3:checked ~ #slider {
     top: calc(2 * var(--tab-height));
+}
+
+.tabbedPane.horizontal .tabContainer #tab3:checked ~ #slider {
+    left: calc(2 * (100% / var(--tab-count)));
 }
 
 .tabbedPane .tabContainer #tab4:checked ~ #slider {
     top: calc(3 * var(--tab-height));
 }
 
-.tabbedPane label {
+.tabbedPane.horizontal .tabContainer #tab4:checked ~ #slider {
+    left: calc(3 * (100% / var(--tab-count)));
+}
+
+.tabbedPane .tabContainer label {
     display: flex;
     height: var(--tab-height);
-    width: 200px;
     align-items: center;
     justify-content: center;
     color: var(--tab-text-color);
     margin-left: var(--slider-width);
     cursor: pointer;
-    transition: color 100ms linear;
+    transition: color 100ms linear, background-color 100ms linear;
+}
+
+.tabbedPane label:hover {
+    background-color: var(--label-rollover-background);
+}
+
+.tabbedPane.horizontal .tabContainer label {
+    margin-left: 0;
+    margin-top: var(--slider-width);
+    width: calc(100% / var(--tab-count));
 }
 
 .tabbedPane .tabContainer label:hover {
@@ -87,8 +142,8 @@
 
 .tabbedPane .descriptionContainer {
     position: relative;
-    display: flex;
     padding: 10px;
+    flex: 4 1 0;
 }
 
 .tabbedPane .descriptionContainer .description {

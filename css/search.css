@@ -1,6 +1,6 @@
 .search {
     --search-border-radius: 999px;
-    --search-width: 500px;
+    --search-icon-size: 24px;
     --search-button-width: 50px;
     --search-height: 30px;
     --search-padding-width: 20px;
@@ -14,13 +14,15 @@
     align-items: center;
     border-radius: var(--search-border-radius);
     overflow: clip;
+    margin: 15px;
+    min-width: 150px;
 }
 
 .search label {
     display: flex;
+    flex: 1;
     align-items: center;
     color: var(--search-text-color);
-    min-width: var(--search-width);
     height: var(--search-height);
     background-color: var(--search-background);
     padding: var(--search-padding-height) var(--search-padding-width);
@@ -69,6 +71,6 @@
 }
 
 .search-icon {
-    width: 55%;
-    height: 55%;
+    width: calc(var(--search-icon-size));
+    height: calc(var(--search-icon-size));
 }
